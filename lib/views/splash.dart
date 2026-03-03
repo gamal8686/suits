@@ -6,7 +6,7 @@ import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/on_boarding.dart';
 
 import '../core/logic/shared_preferences.dart';
-import 'auth/login.dart';
+import 'auth/login/view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

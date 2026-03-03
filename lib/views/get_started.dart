@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_button.dart';
 import 'package:suits/core/components/app_image.dart';
 import 'package:suits/core/logic/helper_methods.dart';
-import 'package:suits/views/auth/login.dart';
+import 'package:suits/views/auth/login/view.dart';
 
 import '../core/logic/shared_preferences.dart';
 
