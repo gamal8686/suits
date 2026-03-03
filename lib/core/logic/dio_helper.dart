@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+enum DataState {success,field, loading,init}
 
 class DioHelper {
   static const _baseUrl = 'https://cosmatics-302b5-default-rtdb.europe-west1.firebasedatabase.app/';

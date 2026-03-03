@@ -3,6 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_bell.dart';
 import 'package:suits/core/components/app_button.dart';
 import 'package:suits/core/components/app_image.dart';
+import 'package:suits/core/logic/helper_methods.dart';
+
+import 'mywishlist _page.dart';
+
+
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -20,14 +25,14 @@ class _HomeViewState extends State<HomeView> {
     final list = [
       Model(
         suits: 'newest1.png',
-        test: 'Blazar',
+        test: 'Blazer',
         image: 'suit.png',
         category: 'All',
       ),
       Model(
         suits: 'newest3.png',
         test: 'Shirt',
-        image: 'shiert.png',
+        image: 'shirt.png',
         category: 'Newest',
       ),
       Model(
@@ -44,14 +49,14 @@ class _HomeViewState extends State<HomeView> {
       ),
       Model(
         suits: 'newest1.png',
-        test: 'Blazar',
+        test: 'Blazer',
         image: 'suit.png',
         category: 'All',
       ),
       Model(
         suits: 'newest3.png',
         test: 'Shirt',
-        image: 'shiert.png',
+        image: 'shirt.png',
         category: 'Newest',
       ),
       Model(
@@ -141,7 +146,7 @@ class _HomeViewState extends State<HomeView> {
               Row(
                 children: [
                   Text(
-                    'Categary',
+                    'Category',
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w500,
@@ -226,45 +231,50 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               SizedBox(height: 15.h),
-              SizedBox(
-                height: 50.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    final isSelected = selectedIndex2 == index;
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selectedIndex2 = index;
-                          });
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: isSelected
-                                ? Theme.of(context).primaryColor
-                                : Color(0xffFFFFFF),
-                            border: BoxBorder.all(color: Color(0xffDD8560)),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
+              GestureDetector(
+                onTap: () {
+                  goTo(MyWishListPage(list: list));
+                },
+                child: SizedBox(
+                  height: 50.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      final isSelected = selectedIndex2 == index;
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedIndex2 = index;
+                            });
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: isSelected
+                                  ? Theme.of(context).primaryColor
+                                  : Color(0xffFFFFFF),
+                              border: BoxBorder.all(color: Color(0xffDD8560)),
+                              borderRadius: BorderRadius.circular(50),
+                            ),
 
-                          width: 100.w,
-                          child: Center(
-                            child: Text(
-                              list[index].category,
-                              style: TextStyle(
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: 'Montserrat',
+                            width: 100.w,
+                            child: Center(
+                              child: Text(
+                                list[index].category,
+                                style: TextStyle(
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    );
-                  },
-                  itemCount: list.length,
+                      );
+                    },
+                    itemCount: list.length,
+                  ),
                 ),
               ),
               SizedBox(height: 15.h),
@@ -281,8 +291,8 @@ class _HomeViewState extends State<HomeView> {
                   return ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: AppImage(
-                      // height: 150.h,
-                      // width: 150.w,
+                      height: 150.h,
+                      width: 150.w,
                       path: list[index].suits,
                       fit: BoxFit.cover,
                     ),

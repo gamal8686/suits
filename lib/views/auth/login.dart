@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/logic/dio_helper.dart';
 import 'package:suits/core/logic/helper_methods.dart';
-import 'package:suits/views/success_message_dialog.dart';
+import 'package:suits/views/success_dialog.dart';
 import 'package:suits/core/components/app_button.dart';
 import 'package:suits/core/components/app_google.dart';
 import 'package:suits/core/components/app_image.dart';
@@ -102,7 +102,7 @@ class _LoginViewState extends State<LoginView> {
                       barrierColor: Colors.black45,
                       context: context,
                       builder: (context) =>
-                          Center(child: SuccessMessageDialog()),
+                          Center(child: SuccessDialog()),
                     );
                   },
                 ),
