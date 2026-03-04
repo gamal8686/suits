@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_image.dart';
@@ -20,11 +19,12 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
 
-
-    goTo(CashHelper.getIsNotFirst? OnBoardingView():LoginView(), delayDuration: 3);
+    goTo(
+      CashHelper.getIsNotFirst ? OnBoardingView() : LoginView(),
+      delayDuration: 3,
+    );
 
     // لية الانتقال سريع من الاسبلاش الى الاون بوردنج مفيش انيميشن للانتقال للصفحة الاخري
-
   }
 
   @override
@@ -37,7 +37,13 @@ class _SplashViewState extends State<SplashView> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AppImage(path: 'logo.svg'),
+              CircleAvatar(
+                backgroundColor: Colors.white,
+                radius: 50,
+                child: ClipOval(
+                  child: AppImage(path: 'logo.svg', fit: BoxFit.cover),
+                ),
+              ),
               SizedBox(width: 10.w),
               Text(
                 'suits',

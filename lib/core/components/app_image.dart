@@ -78,7 +78,7 @@ class _AppImageState extends State<AppImage>
     }
     if (widget.path.endsWith('svg')) {
       return SvgPicture.asset(
-        'assets/icons/${widget.path}',
+        'assets/svg/${widget.path}',
         fit: widget.fit ?? BoxFit.contain,
         height: widget.height,
         width: widget.width,

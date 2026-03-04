@@ -179,7 +179,7 @@ int previousIndex=0;
                         radius: 28,
                         backgroundColor: Colors.transparent,
                         child: AppImage(
-                          path: 'arrow_left.svg',
+                          path: 'arrow_right.svg',
                           color: Theme.of(context).primaryColor,
                           width: 20.w,
                           height: 20.h,

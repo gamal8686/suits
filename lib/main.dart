@@ -81,7 +81,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xffF4F5F7),
         ),
         title: 'Suits',
-        home: const SplashView(),
+        home: const MyWishListPage(),
       ),
     );
   }
