@@ -4,13 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_button.dart';
 import 'package:suits/core/components/app_image.dart';
 import 'package:suits/core/components/app_input.dart';
+import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/forgot_password/cubit.dart';
+
+import '../otp/view.dart';
 
 class ForgotYourPasswordView extends StatelessWidget {
   const ForgotYourPasswordView({super.key});
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class ForgotYourPasswordView extends StatelessWidget {
           create: (context) => CubitForgotPassword(),
           child: Builder(
             builder: (context) {
-              final cubit=BlocProvider.of<CubitForgotPassword>(context);
+              final cubit = BlocProvider.of<CubitForgotPassword>(context);
               return Column(
                 children: [
                   SizedBox(height: 20.h),
@@ -85,7 +85,9 @@ class ForgotYourPasswordView extends StatelessWidget {
                                     ? Color(0xffE5E7EB)
                                     : Color(0xffF9FAFB),
 
-                                borderRadius: BorderRadius.all(Radius.circular(24.r)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(24.r),
+                                ),
                               ),
                               child: Center(
                                 child: Text(
@@ -120,7 +122,9 @@ class ForgotYourPasswordView extends StatelessWidget {
                                     ? Color(0xffF9FAFB)
                                     : Color(0xffE5E7EB),
 
-                                borderRadius: BorderRadius.all(Radius.circular(24.r)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(24.r),
+                                ),
                               ),
                               child: Center(
                                 child: Text(
@@ -143,20 +147,35 @@ class ForgotYourPasswordView extends StatelessWidget {
                   ),
                   SizedBox(height: 16.h),
                   AppInput(
+                    controller: cubit.phone,
                     prefixIcon: AppImage(
                       path: cubit.isSelected ? 'phone.png' : 'emel_p.png',
                       width: 24.w,
                       height: 24.h,
                       color: Theme.of(context).primaryColor,
                     ),
-                    label: cubit.isSelected ? '01065953330' : 'safiaayman@gmail.com',
+                    label: cubit.isSelected
+                        ? '01065953330'
+                        : 'safiaayman@gmail.com',
                     isCheek: true,
                   ),
                   SizedBox(height: 32.h),
-                  AppButton(text: 'Reset Password', onPressed: () {}, width: 356.w),
+                  AppButton(
+                    text: 'Reset Password',
+                    onPressed: () {
+                      if (cubit.isSelected) {
+                        goTo(
+                          OtpView(
+                            numberOtp: cubit.phone.text.trim(),
+                          ),
+                        );
+                      }
+                    },
+                    width: 356.w,
+                  ),
                 ],
               );
-            }
+            },
           ),
         ),
       ),

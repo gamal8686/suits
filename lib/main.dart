@@ -5,6 +5,7 @@ import 'package:suits/core/logic/shared_preferences.dart';
 import 'package:suits/views/auth/create_new_password/view.dart';
 import 'package:suits/views/auth/forgot_password/view.dart';
 import 'package:suits/views/auth/login/view.dart';
+import 'package:suits/views/auth/otp/view.dart';
 import 'package:suits/views/auth/sign_up/view.dart';
 
 import 'package:suits/views/get_started.dart';
@@ -80,8 +81,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xffF4F5F7),
         ),
         title: 'Suits',
-        home: const HomeView
-          (),
+        home: const SplashView(),
       ),
     );
   }

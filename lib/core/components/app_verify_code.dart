@@ -3,14 +3,24 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class AppVerifyCode extends StatelessWidget {
-  const AppVerifyCode({super.key});
+class AppVerifyCode extends StatefulWidget {
+  final TextEditingController otp;
+
+ const AppVerifyCode({super.key, required this.otp});
+
+  @override
+  State<AppVerifyCode> createState() => _AppVerifyCodeState();
+}
+
+class _AppVerifyCodeState extends State<AppVerifyCode> {
+  final otp=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 17.r, right: 17.r),
       child: PinCodeTextField(
+        controller: otp,
         inputFormatters: [FilteringTextInputFormatter.digitsOnly],
         keyboardType: TextInputType.number,
 
@@ -22,6 +32,7 @@ class AppVerifyCode extends StatelessWidget {
           context,
         ).primaryColor.withValues(alpha: 0.040),
         pinTheme: PinTheme(
+
           inactiveFillColor: Theme.of(context).primaryColor,
 
           selectedColor: Theme.of(context).primaryColor,

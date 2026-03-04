@@ -10,6 +10,7 @@ import 'package:suits/core/logic/dio_helper.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/sign_up/cubit.dart';
 
+
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
 
