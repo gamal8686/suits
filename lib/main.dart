@@ -9,6 +9,7 @@ import 'package:suits/views/auth/otp/view.dart';
 import 'package:suits/views/auth/sign_up/view.dart';
 
 import 'package:suits/views/get_started.dart';
+import 'package:suits/views/home/pages/add_to_car.dart';
 import 'package:suits/views/home/pages/home_page.dart';
 import 'package:suits/views/home/pages/mywishlist%20_page.dart';
 import 'package:suits/views/on_boarding.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xffF4F5F7),
         ),
         title: 'Suits',
-        home: const MyWishListPage(),
+        home: const AddToCarView(),
       ),
     );
   }

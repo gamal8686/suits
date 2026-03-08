@@ -17,7 +17,9 @@ class AppBack extends StatelessWidget {
         child: CircleAvatar(
           backgroundColor: Color(0xff1010100d).withValues(alpha: 0.05),
           radius: 15,
-          child: AppImage(path: 'arrow_left.svg', height: 14.h, width: 6.w),
+          child: AppImage(
+
+              path: 'arrow_lift.png', height: 25.h, width: 25.w),
         ),
       ),
     );
