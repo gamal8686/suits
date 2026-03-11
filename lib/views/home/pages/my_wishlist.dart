@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_back.dart';
 import 'package:suits/core/components/app_image.dart';
 
-import 'home_page.dart';
+import 'home.dart';
 
 class MyWishListPage extends StatefulWidget {
   const MyWishListPage({super.key});

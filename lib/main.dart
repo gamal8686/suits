@@ -9,9 +9,10 @@ import 'package:suits/views/auth/otp/view.dart';
 import 'package:suits/views/auth/sign_up/view.dart';
 
 import 'package:suits/views/get_started.dart';
+import 'package:suits/views/home/pages/Profile.dart';
 import 'package:suits/views/home/pages/add_to_car.dart';
-import 'package:suits/views/home/pages/home_page.dart';
-import 'package:suits/views/home/pages/mywishlist%20_page.dart';
+import 'package:suits/views/home/pages/home.dart';
+import 'package:suits/views/home/pages/home_view.dart';
 import 'package:suits/views/on_boarding.dart';
 import 'package:suits/views/splash.dart';
 
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         navigatorKey: navKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+
           textTheme: TextTheme(
             bodyMedium: TextStyle(
               fontSize: 14.sp,
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xffF4F5F7),
         ),
         title: 'Suits',
-        home: const AddToCarView(),
+        home: const HomeView(),
       ),
     );
   }

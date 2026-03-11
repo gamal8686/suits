@@ -5,16 +5,16 @@ import 'package:suits/core/components/app_button.dart';
 import 'package:suits/core/components/app_image.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 
-import 'mywishlist _page.dart';
+import 'my_wishlist.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<HomePage> createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeViewState extends State<HomePage> {
   int selectedIndex1 = 0;
   int selectedIndex2 = 0;
 

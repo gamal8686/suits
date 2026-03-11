@@ -6,14 +6,14 @@ import 'package:suits/core/components/app_back.dart';
 import 'package:suits/core/components/app_button.dart';
 import 'package:suits/core/components/app_image.dart';
 
-class AddToCarView extends StatefulWidget {
-  const AddToCarView({super.key});
+class AddToCarPage extends StatefulWidget {
+  const AddToCarPage({super.key});
 
   @override
-  State<AddToCarView> createState() => _AddToCarViewState();
+  State<AddToCarPage> createState() => _AddToCarViewState();
 }
 
-class _AddToCarViewState extends State<AddToCarView> {
+class _AddToCarViewState extends State<AddToCarPage> {
   int account = 0;
 
   @override
@@ -218,6 +218,7 @@ class _AddToCarViewState extends State<AddToCarView> {
                             ),
                             SizedBox(width: 30.h),
                             AppButton(
+                              width: 230.w,
                               onPressed: () {},
                               height: 40.h,
                               text: 'Add To Cart',
