@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_back.dart';
 import 'package:suits/core/components/app_image.dart';
 
-import 'home.dart';
+
 
 class MyWishListPage extends StatefulWidget {
   const MyWishListPage({super.key});
@@ -233,4 +232,17 @@ class _Item extends StatelessWidget {
       ),
     );
   }
+}
+class Model {
+  final String suits;
+  final String test;
+  final String image;
+  final String category;
+
+  Model({
+    required this.suits,
+    required this.test,
+    required this.image,
+    required this.category,
+  });
 }

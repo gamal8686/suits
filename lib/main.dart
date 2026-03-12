@@ -2,17 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/core/logic/shared_preferences.dart';
-import 'package:suits/views/auth/create_new_password/view.dart';
-import 'package:suits/views/auth/forgot_password/view.dart';
-import 'package:suits/views/auth/login/view.dart';
-import 'package:suits/views/auth/otp/view.dart';
-import 'package:suits/views/auth/sign_up/view.dart';
 
 import 'package:suits/views/get_started.dart';
-import 'package:suits/views/home/pages/Profile.dart';
-import 'package:suits/views/home/pages/add_to_car.dart';
-import 'package:suits/views/home/pages/home.dart';
-import 'package:suits/views/home/pages/home_view.dart';
+import 'package:suits/views/home/pages/home_page.dart';
 import 'package:suits/views/on_boarding.dart';
 import 'package:suits/views/splash.dart';
 
@@ -48,7 +40,6 @@ class MyApp extends StatelessWidget {
         navigatorKey: navKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-
           textTheme: TextTheme(
             bodyMedium: TextStyle(
               fontSize: 14.sp,
@@ -77,14 +68,14 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          appBarTheme: AppBarTheme(color: Color(0xffD9D9D9)),
+          appBarTheme: AppBarTheme(backgroundColor: Color(0xffD9D9D9)),
           colorScheme: ColorScheme.fromSwatch(primarySwatch: primarySwatch),
 
           cardColor: Color(0xffB5B5B5),
           scaffoldBackgroundColor: Color(0xffF4F5F7),
         ),
         title: 'Suits',
-        home: const HomeView(),
+        home: const SplashView(),
       ),
     );
   }

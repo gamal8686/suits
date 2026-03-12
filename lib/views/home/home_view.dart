@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/components/app_image.dart';
 import 'package:suits/views/home/pages/add_to_car.dart';
+import 'package:suits/views/home/pages/home_page.dart';
 
-import 'Profile.dart';
-import 'add_to_car.dart';
-import 'home.dart';
-import 'my_wishlist.dart';
+import 'pages/Profile.dart';
+import 'pages/add_to_car.dart';
+
+import 'pages/my_wishlist.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
