@@ -65,6 +65,7 @@ class _AppInpotState extends State<AppInput> {
             Expanded(
               flex: 2,
               child: TextFormField(
+
                 validator: widget.validator,
                 controller: widget.controller,
                 keyboardType: widget.keyboardType,
