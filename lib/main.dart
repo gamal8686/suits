@@ -5,6 +5,7 @@ import 'package:suits/core/logic/shared_preferences.dart';
 
 import 'package:suits/views/get_started.dart';
 import 'package:suits/views/home/pages/home_page.dart';
+import 'package:suits/views/my_cards.dart';
 import 'package:suits/views/on_boarding.dart';
 import 'package:suits/views/payment.dart';
 import 'package:suits/views/splash.dart';
@@ -76,7 +77,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xffF4F5F7),
         ),
         title: 'Suits',
-        home: const PaymentView(),
+        home: const MyCardsView(),
       ),
     );
   }
